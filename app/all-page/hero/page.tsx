@@ -1,0 +1,3 @@
+export default function Hero() {
+  return <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam rerum alias! Ex voluptate sapiente deserunt! Dolorem, possimus? Exercitationem recusandae ipsam id praesentium cum, error non fugiat temporibus cumque harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus a magnam! Omnis rerum ipsum sequi iste saepe perferendis totam? Vero optio vitae sequi blanditiis nulla exercitationem nam iusto eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio qui voluptate nostrum nulla debitis provident libero doloremque necessitatibus ducimus beatae a voluptas, inventore ut natus laudantium asperiores quasi nesciunt accusamus.</div>;
+}
