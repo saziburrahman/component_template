@@ -1,12 +1,12 @@
-"use client"
-import Logo from "@/public/Sazib.jpg";
+"use client";
+import Logo from "@/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname from next/navigation
 import { useState } from "react";
 
 export default function DefaultNavbar() {
-  const pathname = usePathname();  // Use usePathname from next/navigation
+  const pathname = usePathname(); // Use usePathname from next/navigation
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -19,33 +19,37 @@ export default function DefaultNavbar() {
       : "text-gray-900 dark:text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:hover:bg-gray-700 dark:hover:text-white"; // Inactive link style
   };
 
-  const pageNames={
-    navbar:"/all-page/navbar",
-    hero:"/all-page/hero",
-    about_us:"/all-page/about-us",
-    services:"/all-page/services",
-    features:"/all-page/features",
-    testimonials:"/all-page/testimonials",
-    portfolio:"/all-page/portfolio",
-    blog:"/all-page/blog",
-    pricing:"/all-page/pricing",
-    contact_us:"/all-page/contact-us",
-    footer:"/all-page/footer"
-  }
+  const pageNames = {
+    navbar: "/all-page/navbar",
+    hero: "/all-page/hero",
+    about_us: "/all-page/about-us",
+    services: "/all-page/services",
+    ecommerce_tools: "/all-page/ecommerce-tools",
+    features: "/all-page/features",
+    testimonials: "/all-page/testimonials",
+    portfolio: "/all-page/portfolio",
+    blog: "/all-page/blog",
+    pricing: "/all-page/pricing",
+    contact_us: "/all-page/contact-us",
+    footer: "/all-page/footer",
+  };
 
   return (
     <nav className="bg-white dark:bg-gray-900 w-full top-0 start-0 border-b border-gray-200 dark:border-gray-600">
       <div className="flex flex-wrap items-center justify-between mx-auto p-4 container">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link
+          href="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <Image
             src={Logo}
-            className="h-8 rounded-full"
+            className="rounded-full"
             alt="Sazib Logo"
-            height={30}
-            width={30}
+            height={100}
+            width={35}
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Sazibur Rahman
+          <span className="self-center text-2xl text-orange-500 font-semibold whitespace-nowrap dark:text-white">
+            Conponents Library
           </span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -91,7 +95,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.navbar}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.navbar}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.navbar}`
+                )}`}
               >
                 Navbar
               </Link>
@@ -100,7 +106,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.hero}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.hero}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.hero}`
+                )}`}
               >
                 Hero
               </Link>
@@ -109,7 +117,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.about_us}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.about_us}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.about_us}`
+                )}`}
               >
                 About Us
               </Link>
@@ -118,16 +128,31 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.services}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.services}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.services}`
+                )}`}
               >
                 Services
+              </Link>
+            </li>
+            {/* E-commerce tools Section */}
+            <li>
+              <Link
+                href={`${pageNames.ecommerce_tools}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.ecommerce_tools}`
+                )}`}
+              >
+                ECom-Tools
               </Link>
             </li>
             {/* Features Section */}
             <li>
               <Link
                 href={`${pageNames.features}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.features}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.features}`
+                )}`}
               >
                 Features
               </Link>
@@ -136,7 +161,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.testimonials}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.testimonials}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.testimonials}`
+                )}`}
               >
                 Testimonials
               </Link>
@@ -145,7 +172,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.portfolio}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.portfolio}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.portfolio}`
+                )}`}
               >
                 Portfolio
               </Link>
@@ -154,7 +183,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.blog}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.blog}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.blog}`
+                )}`}
               >
                 Blog
               </Link>
@@ -163,7 +194,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.pricing}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.pricing}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.pricing}`
+                )}`}
               >
                 Pricing
               </Link>
@@ -172,7 +205,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.contact_us}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.contact_us}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.contact_us}`
+                )}`}
               >
                 Contact Us
               </Link>
@@ -181,7 +216,9 @@ export default function DefaultNavbar() {
             <li>
               <Link
                 href={`${pageNames.footer}`}
-                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(`${pageNames.footer}`)}`}
+                className={`block py-2 px-3 rounded md:p-0 ${getActiveLinkClass(
+                  `${pageNames.footer}`
+                )}`}
               >
                 Footer
               </Link>
